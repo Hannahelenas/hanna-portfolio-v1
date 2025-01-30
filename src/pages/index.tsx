@@ -2,6 +2,7 @@ import * as React from "react";
 import type { HeadFC, PageProps } from "gatsby";
 import { graphql, useStaticQuery } from "gatsby";
 import { GatsbyImage, getImage, IGatsbyImageData } from "gatsby-plugin-image";
+import Layout from "../components/layout";
 
 interface ContentfulPageData {
   contentfulPage: {
@@ -51,14 +52,16 @@ const IndexPage: React.FC<PageProps> = () => {
   const image = getImage(heroImage);
 
   return (
-    <main>
-      <h1>{pageTitle}</h1>
-      <h2>{pageIntroHeading}</h2>
-      <div
-        dangerouslySetInnerHTML={{ __html: pageIntroText.internal.content }}
-      />
-      {image && <GatsbyImage image={image} alt={pageTitle} />}
-    </main>
+    <Layout>
+      <section>
+        <h1>{pageTitle}</h1>
+        <h2>{pageIntroHeading}</h2>
+        <div
+          dangerouslySetInnerHTML={{ __html: pageIntroText.internal.content }}
+        />
+        {image && <GatsbyImage image={image} alt={pageTitle} />}
+      </section>
+    </Layout>
   );
 };
 
