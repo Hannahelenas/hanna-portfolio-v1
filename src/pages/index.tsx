@@ -3,6 +3,8 @@ import type { HeadFC, PageProps } from "gatsby";
 import { graphql, useStaticQuery } from "gatsby";
 import { GatsbyImage, getImage, IGatsbyImageData } from "gatsby-plugin-image";
 import Layout from "../components/layout";
+import ReactMarkdown from "react-markdown";
+import Intro from "../components/Intro";
 
 interface ContentfulPageData {
   contentfulPage: {
@@ -53,13 +55,21 @@ const IndexPage: React.FC<PageProps> = () => {
 
   return (
     <Layout>
+      <Intro
+        heading={pageIntroHeading}
+        name="Hanna Klang Eriksson"
+        introText={pageIntroText.internal.content}
+        image={image}
+        imageAlt={pageTitle}
+      />
       <section>
-        <h1>{pageTitle}</h1>
-        <h2>{pageIntroHeading}</h2>
-        <div
-          dangerouslySetInnerHTML={{ __html: pageIntroText.internal.content }}
-        />
-        {image && <GatsbyImage image={image} alt={pageTitle} />}
+        <p>About me</p>
+      </section>
+      <section>
+        <p>My skills</p>
+      </section>
+      <section>
+        <p>Projects</p>
       </section>
     </Layout>
   );
