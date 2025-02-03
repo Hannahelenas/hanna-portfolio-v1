@@ -51,6 +51,13 @@ const config: GatsbyConfig = {
       },
       __key: "pages",
     },
+    /* {
+      resolve: `gatsby-plugin-google-fonts`,
+      options: {
+        fonts: [`Inter:wght@300;400;700;900`],
+        display: "swap",
+      },
+    }, */
   ],
 };
 

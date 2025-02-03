@@ -1,3 +1,16 @@
+.introSection {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-around;
+  padding: 80px;
+  flex-wrap: wrap;
+}
+
+.introTextContent {
+  max-width: 37%;
+}
+
 .imageWrapper {
   display: flex;
   justify-content: center;
@@ -11,4 +24,30 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+@media (max-width: 768px) {
+  .introSection {
+    max-width: 100vw;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0;
+    box-sizing: border-box;
+    margin: 2rem 0 3rem 0;
+  }
+
+  .introTextContent {
+    max-width: 100vw;
+    padding: 0 10px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+  }
+
+  .imageWrapper {
+    margin: auto;
+    margin-top: 2rem;
+  }
 }

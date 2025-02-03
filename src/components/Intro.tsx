@@ -1,7 +1,12 @@
 import * as React from "react";
 import ReactMarkdown from "react-markdown";
 import { GatsbyImage, IGatsbyImageData } from "gatsby-plugin-image";
-import { imageWrapper, imageCircle } from "../styles/Intro.module.css";
+import {
+  introSection,
+  introTextContent,
+  imageWrapper,
+  imageCircle,
+} from "../styles/Intro.module.css";
 interface IntroProps {
   heading: string;
   name: string;
@@ -18,13 +23,23 @@ const Intro: React.FC<IntroProps> = ({
   imageAlt,
 }) => {
   return (
-    <section>
-      <h2>{heading}</h2>
-      <h1>{name}</h1>
-      <ReactMarkdown>{introText}</ReactMarkdown>
+    <section className={introSection}>
+      <div className={introTextContent}>
+        <h2>{heading}</h2>
+        <h1>{name}</h1>
+        <ReactMarkdown>{introText}</ReactMarkdown>
+      </div>
       {image && (
         <div className={imageWrapper}>
-          <GatsbyImage image={image} alt={imageAlt} className={imageCircle} />
+          <GatsbyImage
+            image={image}
+            alt={imageAlt}
+            className={imageCircle}
+            style={{
+              width: "300px",
+              height: "300px",
+            }}
+          />
         </div>
       )}
     </section>

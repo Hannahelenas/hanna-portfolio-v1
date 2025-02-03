@@ -10,7 +10,13 @@ const Layout = ({ children }: LayoutProps) => {
     <>
       <header>
         <div className={navMenu}>
-          <nav>Menu</nav>
+          <nav>
+            <ul>
+              <li>Home</li>
+              <li>About</li>
+              <li>Contact</li>
+            </ul>
+          </nav>
         </div>
       </header>
       <main>{children}</main>
