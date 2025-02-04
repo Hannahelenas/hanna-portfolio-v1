@@ -12,6 +12,8 @@
 }
 
 .imageWrapper {
+  width: 400px;
+  height: 400px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -47,6 +49,8 @@
   }
 
   .imageWrapper {
+    width: 300px;
+    height: 300px;
     margin: auto;
     margin-top: 2rem;
   }

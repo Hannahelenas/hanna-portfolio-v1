@@ -23,7 +23,7 @@ const Intro: React.FC<IntroProps> = ({
   imageAlt,
 }) => {
   return (
-    <section className={introSection}>
+    <section className={introSection} id="home">
       <div className={introTextContent}>
         <h2>{heading}</h2>
         <h1>{name}</h1>
@@ -31,15 +31,7 @@ const Intro: React.FC<IntroProps> = ({
       </div>
       {image && (
         <div className={imageWrapper}>
-          <GatsbyImage
-            image={image}
-            alt={imageAlt}
-            className={imageCircle}
-            style={{
-              width: "300px",
-              height: "300px",
-            }}
-          />
+          <GatsbyImage image={image} alt={imageAlt} className={imageCircle} />
         </div>
       )}
     </section>
