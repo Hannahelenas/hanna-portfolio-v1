@@ -1,9 +1,8 @@
 import * as React from "react";
 import type { HeadFC, PageProps } from "gatsby";
 import { graphql, useStaticQuery } from "gatsby";
-import { GatsbyImage, getImage, IGatsbyImageData } from "gatsby-plugin-image";
+import { getImage, IGatsbyImageData } from "gatsby-plugin-image";
 import Layout from "../components/layout";
-import ReactMarkdown from "react-markdown";
 import Intro from "../components/Intro";
 
 interface ContentfulPageData {
@@ -62,14 +61,17 @@ const IndexPage: React.FC<PageProps> = () => {
         image={image}
         imageAlt={pageTitle}
       />
-      <section>
-        <p>About me</p>
+      <section id="about">
+        <h2>About me</h2>
       </section>
       <section>
-        <p>My skills</p>
+        <h2>My skills</h2>
       </section>
       <section>
-        <p>Projects</p>
+        <h2>Projects</h2>
+      </section>
+      <section id="contact">
+        <h2>Contact</h2>
       </section>
     </Layout>
   );
