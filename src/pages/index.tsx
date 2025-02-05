@@ -67,7 +67,7 @@ const IndexPage: React.FC<PageProps> = () => {
       <section>
         <h2>My skills</h2>
       </section>
-      <section>
+      <section id="projects">
         <h2>Projects</h2>
       </section>
       <section id="contact">

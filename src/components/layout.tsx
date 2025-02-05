@@ -1,5 +1,6 @@
 import React, { ReactNode } from "react";
-import { navMenu } from "../styles/layout.module.css";
+import { navMenu, themeButton } from "../styles/layout.module.css";
+import DarkmodeIcon from "./DarkmodeIcon";
 
 type LayoutProps = {
   children: ReactNode;
@@ -23,6 +24,14 @@ const Layout = ({ children }: LayoutProps) => {
               </li>
             </ul>
           </nav>
+          <button
+            className={themeButton}
+            title="Toggle theme"
+            aria-label="Toggle theme"
+            onClick={() => console.log("click")}
+          >
+            <DarkmodeIcon />
+          </button>
         </div>
       </header>
       <main>{children}</main>

@@ -9,6 +9,7 @@ body {
   color: #232323;
   font-family: "Inter", sans-serif;
   overflow-x: hidden;
+  box-sizing: border-box;
 }
 
 a {
@@ -18,22 +19,46 @@ a {
 
 .navMenu {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
+  align-items: center;
   flex-wrap: wrap;
+  width: 95%;
+  margin: auto;
 
   ul {
     list-style: none;
     display: flex;
+    padding: 0;
   }
 }
 
 h1 {
   font-weight: 900;
-  font-size: 36px;
+  font-size: 3rem;
   font-family: "Raleway", "Inter", sans-serif;
+  margin: 0;
+}
+
+h2 {
+  font-size: 2rem;
+  margin-top: 0.5rem;
 }
 
 p {
-  font-size: 16px;
-  line-height: 1.8;
+  font-size: 1rem;
+  line-height: 1.5;
+  margin-top: 0.5rem;
+}
+
+.themeButton {
+  padding: 0.5rem;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 36px;
+  }
 }
